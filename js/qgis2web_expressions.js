@@ -754,3 +754,56 @@ function fnc__specialcol_(values, context) {
 function fnc_project_color(values, context) {
     return false;
 };
+
+
+
+function exp_label_PIPA_1_eval_expression(context) {
+    // material + ' ' + diameter_i + '"'
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return (((feature.properties['material']  + ' ') + feature.properties['diameter_i'] ) + '"');
+    } else {
+        return (((feature['material']  + ' ') + feature['diameter_i'] ) + '"');
+    }
+}
+
+
+function exp_label_RESERVOIR_4_eval_expression(context) {
+    // reservoir + ' ' + nama
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['reservoir']  + ' ') + feature.properties['nama'] );
+    } else {
+        return ((feature['reservoir']  + ' ') + feature['nama'] );
+    }
+}
+
+
+function exp_label_SUMBER_5_eval_expression(context) {
+    // "sumber air" + ' ' + nama
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['sumber air']  + ' ') + feature.properties['nama'] );
+    } else {
+        return ((feature['sumber air']  + ' ') + feature['nama'] );
+    }
+}
+
+
+function exp_label_WTP_8_eval_expression(context) {
+    // instalasi + ' ' + nama
+
+    var feature = context.feature;
+    
+    if (feature.properties) {
+        return ((feature.properties['instalasi']  + ' ') + feature.properties['nama'] );
+    } else {
+        return ((feature['instalasi']  + ' ') + feature['nama'] );
+    }
+}
